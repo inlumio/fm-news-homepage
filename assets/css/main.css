@@ -1,12 +1,104 @@
-@import "./fonts.css";
-@import "./variables.css";
-@import "./reset.css";
+@import './fonts.css';
+@import './variables.css';
+@import './reset.css';
 
-
+/* 52rem */
 html {
 	font-size: 15px;
 }
 
 body {
 	font-family: 'Inter', sans-serif;
+	background-color: var(--off-white);
+}
+
+p {
+	color: var(--dark-grayish-blue);
+}
+
+.container {
+	padding-inline: 1rem;
+	padding-block: 2rem;
+	margin-inline: auto;
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		max-width: 50rem;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.container {
+		max-width: 65rem;
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.container {
+		max-width: 80rem;
+	}
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header .logo {
+	width: 3rem;
+}
+
+.nav .nav__list {
+	color: var(--dark-grayish-blue);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+	display: none;
+}
+
+.nav .nav__item:hover {
+	color: var(--soft-orange);
+}
+
+.nav__toggle {
+	position: relative;
+	width: 3rem;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 100;
+}
+
+.nav__toggle span {
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	background-color: black;
+	border-radius: 4px;
+	transition: transform 0.5s ease;
+}
+
+.nav__toggle span:nth-child(1) {
+	transform: translateY(-0.5rem);
+}
+
+.nav__toggle span:nth-child(3) {
+	transform: translateY(0.5rem);
+}
+
+.nav__toggle.active span:nth-child(1) {
+	transform: translateY(0) rotate(45deg);
+}
+
+.nav__toggle.active span:nth-child(3) {
+	transform: translateY(0) rotate(-45deg);
+}
+
+.nav__toggle.active span:nth-child(2) {
+	transform: rotateY(-90deg);
 }

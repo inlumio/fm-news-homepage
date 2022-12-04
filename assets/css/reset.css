@@ -16,3 +16,12 @@ img, picture, svg, video {
 	display: block;
 	max-width: 100%;
 }
+
+ul, ol, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}

@@ -1,0 +1,12 @@
+@import "./fonts.css";
+@import "./variables.css";
+@import "./reset.css";
+
+
+html {
+	font-size: 15px;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+}
